@@ -7,7 +7,7 @@ export default function Home() {
   useEffect(() => {
     let blog = {};
     const blogs = async () => {
-      const data = await fetch("http://localhost:3000/api/getBlogs");
+      const data = await fetch("/api/getBlogs");
       const new_data = await data.json();
       setBlogs(new_data);
     };
